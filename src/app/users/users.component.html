@@ -1,0 +1,18 @@
+<section class="w-full">
+    <div>
+  
+    </div>
+    <div>
+        <div class="w-5/6 grid grid-cols-4">
+          <!-- Loop through each user and display their properties in separate columns -->
+          <div class="flex flex-row justify-evenly gap-8 w-full" *ngFor="let user of userList">
+            <div class="col-span-1">
+              <p>Name: {{ user.name }}</p>
+              <p>Role: {{ user.role }}</p>
+              <p>Email: {{ user.email }}</p>
+              <p>Employee ID: {{ user.employeeId }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
