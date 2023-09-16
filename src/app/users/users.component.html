@@ -1,18 +1,55 @@
 <section class="w-full">
     <div>
-  
+
+    </div>
+    <div class="text-center">
+<h1 class="text-4xl font-bold font-serif my-20">
+    User List
+</h1>
     </div>
     <div>
-        <div class="w-5/6 grid grid-cols-4">
-          <!-- Loop through each user and display their properties in separate columns -->
-          <div class="flex flex-row justify-evenly gap-8 w-full" *ngFor="let user of userList">
-            <div class="col-span-1">
-              <p>Name: {{ user.name }}</p>
-              <p>Role: {{ user.role }}</p>
-              <p>Email: {{ user.email }}</p>
-              <p>Employee ID: {{ user.employeeId }}</p>
+        <div class="w-5/6 mx-auto">
+            <!-- Loop through each user and display their properties in separate columns -->
+            <div class="hidden my-8 md:grid md:grid-cols-4 border-b  ">
+                <p class="mb-3 text-center text-xl font-semibold hover:border-b hover:border-blue-800 font-mono">Name</p>
+                <p class="mb-3 text-center text-xl font-semibold hover:border-b font-mono"> Email</p>
+                <p class="mb-3 text-center text-xl font-semibold hover:border-b font-mono">ID</p>
+                <p class="mb-3 text-center text-xl font-semibold hover:border-b font-mono">Role</p>
+
+
+
             </div>
-          </div>
+
+
+            <div *ngFor="let user of userList">
+                <div class="my-8 md:grid md:grid-cols-4 border-b py-8 bg-slate-100 ">
+                    <div class="mx-auto ">
+                        <p class="text-slate-600"> {{ user.name }}</p>
+
+
+                    </div>
+                    <div class="mx-auto ">
+                        <p> {{ user.email }}</p>
+
+
+                    </div>
+                    <div class="mx-auto ">
+                        <p> {{ user.employeeId }}</p>
+
+
+                    </div>
+                    <div class="mx-auto ">
+                        <p> {{ user.role }}</p>
+
+
+                    </div>
+     
+                    <!-- <p>Name: {{ user.name }}</p>
+                    <p>Role: {{ user.role }}</p>
+                    <p>Email: {{ user.email }}</p>
+                    <p>Employee ID: {{ user.employeeId }}</p> -->
+                </div>
+            </div>
         </div>
-      </div>
-  </section>
+    </div>
+</section>
