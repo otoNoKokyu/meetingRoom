@@ -1,14 +1,11 @@
-<section class="w-full">
-    <div>
 
-    </div>
     <div class="text-center">
 <h1 class="text-4xl font-bold font-serif my-20">
     User List
 </h1>
     </div>
     <div>
-        <div class="w-5/6 mx-auto">
+        <div class="w-full mx-auto">
             <!-- Loop through each user and display their properties in separate columns -->
             <div class="hidden my-8 md:grid md:grid-cols-4 border-b  ">
                 <p class="mb-3 text-center text-xl font-semibold hover:border-b hover:border-blue-800 font-mono">Name</p>
@@ -21,7 +18,7 @@
             </div>
 
 
-            <div *ngFor="let user of userList">
+            <div *ngFor="let user of filteredUserList ">
                 <div class="my-8 md:grid md:grid-cols-4 border-b py-8 bg-slate-100 ">
                     <div class="mx-auto ">
                         <p class="text-slate-600"> {{ user.name }}</p>
@@ -52,4 +49,3 @@
             </div>
         </div>
     </div>
-</section>
